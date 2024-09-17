@@ -55,6 +55,8 @@
             animation: colorChange 4s infinite alternate ease-in-out;
             text-align: center; /* Centrerar texten */
             word-wrap: break-word; /* Gör så att texten bryts på mindre skärmar */
+            overflow-wrap: break-word; /* Säkerställer att lång text bryts */
+            white-space: normal; /* Gör att texten bryts och inte visas på en rad */
         }
 
         @keyframes colorChange {
@@ -75,7 +77,7 @@
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
             margin-bottom: 30px;
-            overflow-wrap: break-word; /* Gör så att längre text inte bryts */
+            overflow-wrap: break-word;
         }
 
         .announcement-text {
@@ -119,8 +121,8 @@
             transition: background-color 0.3s, transform 0.3s ease-in-out, width 0.4s, opacity 0.3s;
             position: relative;
             overflow: hidden;
-            width: 100%; /* Full bredd på mindre skärmar */
-            max-width: 320px; /* Maxbredd */
+            width: 100%;
+            max-width: 320px;
         }
 
         .cta-button span {
@@ -130,7 +132,7 @@
 
         .cta-button:hover {
             background-color: #995a03;
-            transform: scale(1.05); /* Knappen blir större när man hovrar över den */
+            transform: scale(1.05);
         }
 
         .cta-button:hover span {
@@ -160,7 +162,7 @@
             justify-content: center;
             gap: 15px;
             margin-top: 0px;
-            flex-wrap: wrap; /* Gör att knapparna bryts till nästa rad vid behov */
+            flex-wrap: wrap;
         }
 
         .stat-item {
@@ -192,8 +194,8 @@
         /* Chat button */
         .chat-button {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 10px;
+            right: 10px;
             background-color: #b36d04;
             color: white;
             border: none;
@@ -274,6 +276,8 @@
             }
 
             .chat-button {
+                bottom: 5px;
+                right: 5px;
                 width: 35px;
                 height: 35px;
                 font-size: 12px;
