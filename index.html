@@ -24,10 +24,10 @@
             flex-direction: column;
             overflow: hidden;
             opacity: 0;
-            animation: slideIn 1.2s forwards; /* Animering från botten */
+            animation: slideIn 1.2s forwards;
         }
 
-        /* Animering för sidladdning (från botten och upp) */
+        /* Animering för sidladdning */
         @keyframes slideIn {
             from {
                 opacity: 0;
@@ -53,11 +53,13 @@
             transition: transform 0.3s ease, color 0.3s ease;
             cursor: pointer;
             animation: colorChange 4s infinite alternate ease-in-out;
+            text-align: center; /* Centrerar texten */
+            word-wrap: break-word; /* Gör så att texten bryts på mindre skärmar */
         }
 
         @keyframes colorChange {
             0% { color: #b36d04; }
-            100% { color: #995a03; } /* Ännu mörkare vid animation */
+            100% { color: #995a03; }
         }
 
         .domain-name:hover {
@@ -73,6 +75,7 @@
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
             margin-bottom: 30px;
+            overflow-wrap: break-word; /* Gör så att längre text inte bryts */
         }
 
         .announcement-text {
@@ -116,7 +119,8 @@
             transition: background-color 0.3s, transform 0.3s ease-in-out, width 0.4s, opacity 0.3s;
             position: relative;
             overflow: hidden;
-            width: 320px; /* Tillräckligt bred för att rymma e-postadressen */
+            width: 100%; /* Full bredd på mindre skärmar */
+            max-width: 320px; /* Maxbredd */
         }
 
         .cta-button span {
@@ -130,7 +134,7 @@
         }
 
         .cta-button:hover span {
-            opacity: 0; /* Döljer texten "Contact Us" omedelbart */
+            opacity: 0;
         }
 
         .cta-button::after {
@@ -156,6 +160,7 @@
             justify-content: center;
             gap: 15px;
             margin-top: 0px;
+            flex-wrap: wrap; /* Gör att knapparna bryts till nästa rad vid behov */
         }
 
         .stat-item {
@@ -166,6 +171,7 @@
             text-align: center;
             width: 120px;
             transition: transform 0.3s ease;
+            margin-bottom: 10px;
         }
 
         .stat-item:hover {
@@ -238,21 +244,20 @@
         /* Mobiloptimering */
         @media (max-width: 768px) {
             .domain-name {
-                font-size: 2.5em; /* Mindre domännamn på mobil */
+                font-size: 2.5em;
             }
 
             .cta-text {
-                font-size: 1.5em; /* Mindre CTA-text */
+                font-size: 1.5em;
             }
 
             .cta-button {
                 padding: 10px 40px;
-                width: 280px; /* Mindre knappbredd på mobil */
                 font-size: 1em;
             }
 
             .announcement-text, .subtext {
-                font-size: 1.2em; /* Mindre textstorlek */
+                font-size: 1.2em;
             }
 
             .stat-item h3 {
@@ -264,20 +269,21 @@
             }
 
             .centered-content {
-                max-width: 100%; /* Full bredd på mobil */
+                max-width: 100%;
                 padding: 15px;
             }
 
             .chat-button {
                 width: 35px;
-                height: 35px; /* Mindre chattknapp på mobil */
+                height: 35px;
                 font-size: 12px;
             }
 
             .chat-icon::before {
-                font-size: 16px; /* Mindre chattikon */
+                font-size: 16px;
             }
         }
+
     </style>
 </head>
 <body>
