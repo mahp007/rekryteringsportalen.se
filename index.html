@@ -47,7 +47,7 @@
         /* Large Domain Name (outside the black box) */
         .domain-name {
             font-size: 3.7em; 
-            color: #b36d04; /* Mörkare orange */
+            color: #b36d04;
             margin-bottom: 20px;
             letter-spacing: 2px;
             transition: transform 0.3s ease, color 0.3s ease;
@@ -92,7 +92,7 @@
         /* Make Your Move text */
         .cta-text {
             font-size: 1.8em;
-            color: #b36d04; /* Mörkare orange */
+            color: #b36d04;
             margin-bottom: 20px;
             animation: moveAnimation 3s infinite alternate ease-in-out;
         }
@@ -125,7 +125,7 @@
         }
 
         .cta-button:hover {
-            background-color: #995a03; /* Mörkare orange vid hover */
+            background-color: #995a03;
             transform: scale(1.05); /* Knappen blir större när man hovrar över den */
         }
 
@@ -134,7 +134,7 @@
         }
 
         .cta-button::after {
-            content: 'ma.moh006@protonmail.com'; /* Visar e-postadressen */
+            content: 'ma.moh006@protonmail.com';
             position: absolute;
             top: 50%;
             left: 50%;
@@ -174,7 +174,7 @@
 
         .stat-item h3 {
             font-size: 1.6em;
-            color: #b36d04; /* Mörkare orange */
+            color: #b36d04;
             margin-bottom: 5px;
         }
 
@@ -188,7 +188,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #b36d04; /* Mörkare orange */
+            background-color: #b36d04;
             color: white;
             border: none;
             border-radius: 50%;
@@ -202,10 +202,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            animation: pulse 4s infinite; /* Långsammare pulsande effekt */
+            animation: pulse 4s infinite;
         }
 
-        /* Långsammare pulsande animation för chattknappen */
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.1); }
@@ -236,6 +235,49 @@
             max-width: 300px;
         }
 
+        /* Mobiloptimering */
+        @media (max-width: 768px) {
+            .domain-name {
+                font-size: 2.5em; /* Mindre domännamn på mobil */
+            }
+
+            .cta-text {
+                font-size: 1.5em; /* Mindre CTA-text */
+            }
+
+            .cta-button {
+                padding: 10px 40px;
+                width: 280px; /* Mindre knappbredd på mobil */
+                font-size: 1em;
+            }
+
+            .announcement-text, .subtext {
+                font-size: 1.2em; /* Mindre textstorlek */
+            }
+
+            .stat-item h3 {
+                font-size: 1.4em;
+            }
+
+            .stat-item p {
+                font-size: 0.9em;
+            }
+
+            .centered-content {
+                max-width: 100%; /* Full bredd på mobil */
+                padding: 15px;
+            }
+
+            .chat-button {
+                width: 35px;
+                height: 35px; /* Mindre chattknapp på mobil */
+                font-size: 12px;
+            }
+
+            .chat-icon::before {
+                font-size: 16px; /* Mindre chattikon */
+            }
+        }
     </style>
 </head>
 <body>
